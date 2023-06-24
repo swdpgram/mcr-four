@@ -1,7 +1,12 @@
+import { Header } from "./Components/Header";
+import { AsideLeft } from "./Components/AsideLeft";
+
 export function Home() { 
     return(
         <>
-        Home Page
+        <Header />
+        <AsideLeft /> 
+        
         </>
     );
 }

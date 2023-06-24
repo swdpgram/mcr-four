@@ -45,3 +45,30 @@ p {
     display: flex;
     flex-direction: column;  
 }
+
+.homefeed-alignment { 
+    display: flex;
+    border: 1px solid grey;
+    /* width: 150vh;  */
+}
+
+.home-container { 
+    margin: 1rem;
+}
+
+.postcard-box { 
+    border: 1px solid black;
+}
+
+.tags { 
+    padding: 0.1rem;
+    background-color: blue;
+    color: white;
+    margin-right: 0.5rem;
+    border: 1px solid;
+    border-radius: 10%;
+}
+
+.username-color { 
+    color: blue;
+}

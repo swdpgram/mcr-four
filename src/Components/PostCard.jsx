@@ -1,5 +1,6 @@
 import { useLogic } from "./logic-context";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function PostCard({
   postId,
@@ -74,7 +75,11 @@ export function PostCard({
           <hr />
 
           <div className="icons-post">
+
+            <Link to={`/`+postId}>
             <i className="bi bi-chat-left"></i>
+            </Link>
+
             <i className="bi bi-share"></i>
 
             {bookmark === true ? (

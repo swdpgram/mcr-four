@@ -32,45 +32,63 @@ export function PostCard({
   return (
     <>
       <div className="postcard-box">
-        <p>
-          {" "}
-          {upvotes > downvotes ? upvotes - downvotes : downvotes - upvotes}{" "}
-        </p>
-        <div className="profile-circle"> </div>
-        <p>
-          {" "}
-          Posted by <span className="username-color"> @{username} </span> .{" "}
-          {result}min{" "}
-        </p>
+        <div className="votes-box">
+          <div className="inverted-triangle"> </div>
+          <p>
+            {upvotes > downvotes ? upvotes - downvotes : downvotes - upvotes}{" "}
+          </p>
+        </div>
 
-        <h2> {post}</h2>
-        <p>
-          {" "}
-          {tags.map((tagitem, index) => {
-            return (
-              <span key={index} className="tags">
-                {" "}
-                {tagitem}{" "}
-              </span>
-            );
-          })}
-        </p>
-        <p> {postDescription} </p>
+        <div className="context-box">
 
-        <hr />
+         <div className="content-details"> 
+         <div className="profile-circle"> </div>
+          <p>
+            Posted by <span className="username-color"> 
+              @{username}
+            </span> . {result}min
+          </p>
+         </div>
+         
+         
+          <div className="post-body"> 
+          <h2> {post}</h2>
+          <p>
+    
+            {tags.map((tagitem, index) => {
+              return (
+                <span key={index} className="tags">
+                  {tagitem}
+                </span>
+              );
+            })}
+          </p>
+          <p> {postDescription} </p>
 
-        <div className="icons-post">
-          <i className="bi bi-chat-left"></i>
-          <i className="bi bi-share"></i>
+          
+          
+          </div>
+          
 
-          {bookmark === true ? (
-            <i
-              className="bi bi-bookmark-fill"
-              onClick={() => setBookmark(false)}
-            ></i>
-          ) : (
-            <i className="bi bi-bookmark" onClick={() => setBookmark(true)}></i>
-          )}
+          
+          <hr />
+
+          <div className="icons-post">
+            <i className="bi bi-chat-left"></i>
+            <i className="bi bi-share"></i>
+
+            {bookmark === true ? (
+              <i
+                className="bi bi-bookmark-fill"
+                onClick={() => setBookmark(false)}
+              ></i>
+            ) : (
+              <i
+                className="bi bi-bookmark"
+                onClick={() => setBookmark(true)}
+              ></i>
+            )}
+          </div>
         </div>
       </div>
     </>

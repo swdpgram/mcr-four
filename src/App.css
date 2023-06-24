@@ -72,3 +72,25 @@ p {
 .username-color { 
     color: blue;
 }
+
+.postcard-box { 
+    display: flex;
+    padding: 1rem;
+    gap: 20px;
+}
+
+.content-details { 
+    display: flex;
+    gap: 10px;
+}
+
+.post-body { 
+    display: flex;
+    flex-direction: column;  
+    gap: 5px;
+}
+
+.icons-post { 
+    display: flex;
+    justify-content: space-between;
+}
